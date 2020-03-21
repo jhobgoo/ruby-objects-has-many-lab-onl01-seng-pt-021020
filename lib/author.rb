@@ -1,13 +1,30 @@
 class Author
+<<<<<<< HEAD
   
   attr_accessor :name
 
   @@all = []
 
+=======
+
+  attr_accessor :name, :post
+  
+  @@all = []
+  
+>>>>>>> f3b33fe02a61f73be85892f533f578210ec0fd25
   def initialize(name)
     @name = name
     @@all << self
   end
+<<<<<<< HEAD
+=======
+  
+  def posts
+    Post.all.select do |song|
+      Post.author == self
+    end
+  end
+>>>>>>> f3b33fe02a61f73be85892f533f578210ec0fd25
 
   def self.all
     @@all
